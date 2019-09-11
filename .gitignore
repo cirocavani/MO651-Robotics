@@ -1,0 +1,7 @@
+/downloads/
+/software/
+**/.ipynb_checkpoints/
+/Project.toml
+/Manifest.toml
+/environment*.yaml
+/.vscode/
