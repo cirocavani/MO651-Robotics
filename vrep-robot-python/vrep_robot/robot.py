@@ -5,7 +5,7 @@ class Robot():
 	def __init__(self):
 		self.ROBOT_WIDTH = 0.381
 		self.WHEEL_RADIUS = 0.195/2.0
-		self.SERVER_IP = "172.17.0.2"
+		self.SERVER_IP = "127.0.0.1"
 		self.SERVER_PORT = 19997
 		self.clientID = self.start_sim()
 		self.us_handle, self.vision_handle, self.laser_handle = self.start_sensors()

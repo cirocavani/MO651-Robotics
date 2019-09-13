@@ -26,5 +26,5 @@ docker create \
     --env DISPLAY=$DISPLAY \
     --volume /tmp/.X11-unix:/tmp/.X11-unix \
     --volume $PROJECT_DIR:/home/robot/Robotics \
-    --publish 25000:25000 \
+    --publish 19997:19997 \
     $IMAGE_TAG
