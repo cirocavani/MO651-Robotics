@@ -4,6 +4,10 @@ Runs V-REP like a normal GUI Application inside a Docker container.
 
 Assumes X running on the Host, same user of Docker container (uid=1000).
 
+[`build.sh`](build.sh)
+
+[`Dockerfile`](Dockerfile)
+
 How to use:
 
 ```sh
@@ -14,3 +18,5 @@ How to use:
 ```
 
 After `run.sh`, V-REP window opens as a normal GUI Application on Host.
+
+![V-REP](_assets/vrep.png)

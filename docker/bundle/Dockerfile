@@ -38,7 +38,7 @@ COPY --chown=robot downloads downloads
 COPY --chown=robot setup setup
 COPY --chown=robot conf conf
 COPY --chown=robot bin bin
-COPY --chown=robot setup/jupyter_notebook_config.py /home/robot/.jupyter/
+COPY --chown=robot docker/bundle/jupyter_notebook_config.py /home/robot/.jupyter/
 
 RUN ~/setup/install-conda.sh
 RUN ~/setup/install-jupyter.sh

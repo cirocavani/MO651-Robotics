@@ -1,8 +1,13 @@
 # Docker Infrastructure
 
+Containerized project infrastructure (containers encapsulating application and dependencies).
+
+Supports a `robotics` container with all project and a `vrep` container to run V-REP on any Linux.
+
+
 ## Appliances
 
-#### Bundle
+#### Robotics Bundle
 
 [ [README](bundle/README.md) ]
  [ [Dockerfile](bundle/Dockerfile) ]
