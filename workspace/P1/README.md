@@ -30,6 +30,6 @@ Format 1697 columns:
 * `timestamp` (1 column, float, seconds)
 * `x`, `y`, `z` (position, 3 columns, float, meters, global coordinates)
 * `alpha`, `beta`, `gamma` (orientation, 3 columns, float, radians, global coordinates)
-* `us_1`-`us_16` (ultrasound sensor readings, 16 columns, float, meters, robot coordinates)
+* `us_1`-`us_16` (ultrasonic sensor readings, 16 columns, float, meters, robot coordinates)
 * `laser_1_x`-`laser_558_z` (laser sensor readings, 1674 columns, float, meters, robot coordinates)
     - at most 558 readings of each x, y, z component (empty when no readings)
