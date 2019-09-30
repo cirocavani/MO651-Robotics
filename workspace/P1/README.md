@@ -11,12 +11,12 @@ The general objective of this work is to build, on the V-REP robotic simulator, 
 Kinematic model of the differential robot P3DX.
 
 
-[**P3DX Sensor Data**](P3DX%20Sensor%20Data.ipynb) ([NBViewer](https://nbviewer.jupyter.org/github/cirocavani/MO651-Robotics/blob/master/workspace/P1/P3DX%20Sendor%20Data.ipynb))
+[**P3DX Sensor Data**](P3DX%20Sensor%20Data.ipynb) ([NBViewer](https://nbviewer.jupyter.org/github/cirocavani/MO651-Robotics/blob/master/workspace/P1/P3DX%20Sensor%20Data.ipynb))
 
 Sensor data aquisition as the robot P3DX moves around.
 
 
-[**P3DX Sensor Analysis**](P3DX%20Sensor%20Analysis.ipynb) ([NBViewer](https://nbviewer.jupyter.org/github/cirocavani/MO651-Robotics/blob/master/workspace/P1/P3DX%20Sendor%20Analysis.ipynb))
+[**P3DX Sensor Analysis**](P3DX%20Sensor%20Analysis.ipynb) ([NBViewer](https://nbviewer.jupyter.org/github/cirocavani/MO651-Robotics/blob/master/workspace/P1/P3DX%20Sensor%20Analysis.ipynb))
 
 Sensor data visualization.
 
