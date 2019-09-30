@@ -7,8 +7,10 @@ Pkg.instantiate()
 deps = [
     "IJulia",
     "DataFrames",
+    "CSV",
     "PyPlot",
     "Plots",
+    "StatsPlots",
 ]
 
 ENV["PYTHON"] = joinpath(ENV["CONDA_INSTDIR"], "envs", "python", "bin", "python")
