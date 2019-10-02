@@ -25,11 +25,12 @@ Sensor data visualization.
 
 Sensor data.
 
-Format 1697 columns:
+Format 1677 columns:
 
 * `timestamp` (1 column, float, seconds)
+* `command` (1 column, string, execution description)
 * `x`, `y`, `z` (position, 3 columns, float, meters, global coordinates)
 * `alpha`, `beta`, `gamma` (orientation, 3 columns, float, radians, global coordinates)
-* `us_1`-`us_16` (ultrasonic sensor readings, 16 columns, float, meters, robot coordinates)
-* `laser_1_x`-`laser_558_z` (laser sensor readings, 1674 columns, float, meters, robot coordinates)
-    - at most 558 readings of each x, y, z component (empty when no readings)
+* `sonar_1`-`sonar_16` (ultrasonic sensor readings, 16 columns, float, meters, robot coordinates)
+* `laser_1_x`-`laser_551_z` (laser sensor readings, 1653 columns, float, meters, robot coordinates)
+    - at most 551 readings of each x, y, z component (empty when no readings)

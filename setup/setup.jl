@@ -11,6 +11,8 @@ deps = [
     "PyPlot",
     "Plots",
     "StatsPlots",
+    "Images",
+    "ImageMagick",
 ]
 
 ENV["PYTHON"] = joinpath(ENV["CONDA_INSTDIR"], "envs", "python", "bin", "python")
