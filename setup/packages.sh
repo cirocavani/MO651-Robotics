@@ -1,4 +1,4 @@
-CONDA_PKG=Miniconda3-4.7.10-Linux-x86_64.sh
+CONDA_PKG=Miniconda3-4.7.12-Linux-x86_64.sh
 CONDA_URL=https://repo.anaconda.com/miniconda/$CONDA_PKG
 
 JULIA_PKG=julia-1.2.0-linux-x86_64.tar.gz
