@@ -10,7 +10,12 @@ mkdir -p .vscode
 
 echo "{
     \"python.condaPath\": \"$CONDA_INSTDIR/bin/conda\",
-    \"python.pythonPath\": \"$CONDA_INSTDIR/envs/python/bin/python\"
+    \"python.pythonPath\": \"$CONDA_INSTDIR/envs/python/bin/python\",
+    \"files.watcherExclude\": {
+        \"**/.git/objects/**\": true,
+        \"**/.git/subtree-cache/**\": true,
+        \"**/software/**\": true
+    }
 }
 " > .vscode/settings.json
 
