@@ -31,5 +31,6 @@ USER robot
 WORKDIR /home/robot
 
 EXPOSE 19997
+EXPOSE 25000
 
 CMD /home/robot/Robotics/software/vrep/vrep.sh

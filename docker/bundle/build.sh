@@ -28,4 +28,5 @@ docker create \
     --volume $(pwd):/home/robot/Robotics \
     --publish 8888:8888 \
     --publish 19997:19997 \
+    --publish 25000:25000 \
     $IMAGE_TAG

@@ -1,0 +1,7 @@
+name = "VREPRobot"
+uuid = "c59bc619-5862-40df-b560-9e5a8bb318e1"
+authors = ["Ciro Cavani <ciro.cavani@gmail.com>"]
+version = "0.0.1"
+
+[deps]
+Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"

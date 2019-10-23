@@ -11,10 +11,12 @@ mkdir -p .vscode
 echo "{
     \"python.condaPath\": \"$CONDA_INSTDIR/bin/conda\",
     \"python.pythonPath\": \"$CONDA_INSTDIR/envs/python/bin/python\",
+    \"julia.executablePath\": \"$JULIA_INSTDIR/bin/julia\",
     \"files.watcherExclude\": {
         \"**/.git/objects/**\": true,
         \"**/.git/subtree-cache/**\": true,
-        \"**/software/**\": true
+        \"**/software/**\": true,
+        \"**/downloads/**\": true
     }
 }
 " > .vscode/settings.json

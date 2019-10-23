@@ -50,5 +50,6 @@ RUN rm -rf downloads setup
 
 EXPOSE 8888
 EXPOSE 19997
+EXPOSE 25000
 
 CMD /home/robot/bin/jupyter-lab
