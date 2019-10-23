@@ -202,7 +202,7 @@ class Robot():
 		"""
 		res, position = vrep.simxGetObjectPosition(self.clientID, self.robot_handle, -1, vrep.simx_opmode_streaming)
 		while(res != vrep.simx_return_ok):
-			res, position = vrep.simxGetObjectPosition(self.clientID, self.robot_handle, -1, vrep.simx_opmode_streaming)
+			res, position = vrep.simxGetObjectPosition(self.clientID, self.robot_handle, -1, vrep.simx_opmode_buffer)
 
 		return position
 
@@ -214,6 +214,6 @@ class Robot():
 		"""
 		res, orientation = vrep.simxGetObjectOrientation(self.clientID, self.robot_handle, -1, vrep.simx_opmode_streaming)
 		while(res != vrep.simx_return_ok):
-			res, orientation = vrep.simxGetObjectOrientation(self.clientID, self.robot_handle, -1, vrep.simx_opmode_streaming)
+			res, orientation = vrep.simxGetObjectOrientation(self.clientID, self.robot_handle, -1, vrep.simx_opmode_buffer)
 
 		return orientation
