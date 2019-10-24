@@ -1,7 +1,8 @@
-name = "VREPRobot"
-uuid = "c59bc619-5862-40df-b560-9e5a8bb318e1"
+name = "Robotics"
+uuid = "facd5b7b-9aee-4b35-b3b8-a081b31a0ace"
 authors = ["Ciro Cavani <ciro.cavani@gmail.com>"]
 version = "0.0.1"
 
 [deps]
 Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"

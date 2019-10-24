@@ -1,21 +1,3 @@
-__precompile__(false)
-
-module VREPRobot
-
-export Robot,
-    read_sonar,
-    read_laser,
-    read_vision,
-    get_current_position,
-    get_current_orientation,
-    set_right_velocity,
-    set_left_velocity,
-    set_velocity,
-    stop,
-    reset_simulation
-
-include("VREP.jl")
-
 const ROBOT_WIDTH = Float32(0.381)
 const WHEEL_RADIUS = Float32(0.195/2.0)
 
@@ -239,5 +221,3 @@ function reset_simulation(connection_address="127.0.0.1", connection_port=UInt16
     VREP.simx_finish(client_id)
     return nothing
 end
-
-end # module

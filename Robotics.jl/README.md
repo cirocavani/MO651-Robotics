@@ -1,9 +1,11 @@
-# V-REP P3DX Robot in Julia
+# Robotics in Julia
+
+V-REP P3DX.
 
 Package setup (from Project folder)
 
 ```sh
-cd VREPRobot.jl/
+cd Robotics.jl/
 git init
 git add .
 git commit -m "Package setup"
@@ -20,6 +22,6 @@ bin/julia-repl
 
 ```julia
 using Pkg
-pkg_dir = joinpath(pwd(), "VREPRobot.jl")
+pkg_dir = joinpath(pwd(), "Robotics.jl")
 Pkg.add(PackageSpec(url=pkg_dir))
 ```
