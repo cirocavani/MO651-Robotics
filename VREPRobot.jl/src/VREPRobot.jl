@@ -5,7 +5,7 @@ module VREPRobot
 export Robot,
     read_sonar,
     read_laser,
-    read_vision_sensor,
+    read_vision,
     get_current_position,
     get_current_orientation,
     set_right_velocity,
@@ -22,8 +22,8 @@ const WHEEL_RADIUS = Float32(0.195/2.0)
 struct Robot
     client_id::Int32
     sonar_handle::Vector{Int32}
-    vision_handle::Int32
     laser_handle::Int32
+    vision_handle::Int32
     motors_handle::Dict{Symbol, Int32}
     robot_handle::Int32
     robot_width::Float32
@@ -33,13 +33,13 @@ end
 function Robot(connection_address="127.0.0.1", connection_port=UInt16(25000);
                robot_width=ROBOT_WIDTH, wheel_radius=WHEEL_RADIUS)
     client_id = start_sim(connection_address, connection_port)
-    sonar_handle, vision_handle, laser_handle = start_sensors(client_id)
+    sonar_handle, laser_handle, vision_handle = start_sensors(client_id)
     motors_handle = start_motors(client_id)
     robot_handle = start_robot(client_id)
     return Robot(client_id,
                  sonar_handle,
-                 vision_handle,
                  laser_handle,
+                 vision_handle,
                  motors_handle,
                  robot_handle,
                  robot_width,
@@ -73,15 +73,7 @@ function start_sensors(client_id)
         end
     end
 
-    #Starting vision sensor
-    res, vision_handle = VREP.simx_get_object_handle(client_id, "Vision_sensor", VREP.simx_opmode_oneshot_wait)
-    if res != VREP.simx_return_ok
-        println("Vision sensor not connected.")
-    else
-        println("Vision sensor connected.")
-    end
-    
-    #Starting laser sensor
+    # Starting laser sensor
     res, laser_handle = VREP.simx_get_object_handle(client_id, "fastHokuyo", VREP.simx_opmode_oneshot_wait)
     if res != VREP.simx_return_ok
         println("Laser not connected.")
@@ -89,7 +81,15 @@ function start_sensors(client_id)
         println("Laser connected.")
     end
     
-    return sonar_handle, vision_handle, laser_handle
+    # Starting vision sensor
+    res, vision_handle = VREP.simx_get_object_handle(client_id, "Vision_sensor", VREP.simx_opmode_oneshot_wait)
+    if res != VREP.simx_return_ok
+        println("Vision sensor not connected.")
+    else
+        println("Vision sensor connected.")
+    end
+    
+    return sonar_handle, laser_handle, vision_handle
 end
 
 function start_motors(client_id)
@@ -152,7 +152,7 @@ function read_laser(robot)
     return VREP.simx_unpack_floats(laser)
 end
 
-function read_vision_sensor(robot)
+function read_vision(robot)
     res, resolution, image_data = VREP.simx_get_vision_sensor_image(robot.client_id,
                                                                     robot.vision_handle,
                                                                     0,
@@ -237,6 +237,7 @@ function reset_simulation(connection_address="127.0.0.1", connection_port=UInt16
     println("Simulation started...")
     sleep(3.0)
     VREP.simx_finish(client_id)
+    return nothing
 end
 
 end # module
