@@ -13,6 +13,7 @@ export Robot,
     set_left_velocity,
     set_velocity,
     stop,
+    release,
     reset_simulation,
 # Util
     pose2D,

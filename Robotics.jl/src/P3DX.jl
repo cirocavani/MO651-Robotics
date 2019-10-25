@@ -29,7 +29,6 @@ function Robot(connection_address="127.0.0.1", connection_port=UInt16(25000);
 end
 
 function start_sim(connection_address, connection_port)
-    VREP.simx_finish(-1)
     client_id = VREP.simx_start(connection_address, connection_port, true, true, 2000, 5)
     if client_id != -1
         println("Connected to remoteApi server.")
@@ -207,15 +206,20 @@ function stop(robot)
     return nothing
 end
 
+function release(robot)
+    VREP.simx_finish(robot.client_id)
+    return nothing
+end
+
 function reset_simulation(connection_address="127.0.0.1", connection_port=UInt16(19997))
     client_id = VREP.simx_start(connection_address, connection_port, true, true, 2000, 5)
     if client_id == -1
         error("Unable to connect to V-REP!")
     end
-    VREP.simx_stop_simulation(client_id, VREP.simx_opmode_oneshot)
+    VREP.simx_stop_simulation(client_id, VREP.simx_opmode_oneshot_wait)
     println("Simulation stopped...")
     sleep(2.0)
-    VREP.simx_start_simulation(client_id, VREP.simx_opmode_oneshot)
+    VREP.simx_start_simulation(client_id, VREP.simx_opmode_oneshot_wait)
     println("Simulation started...")
     sleep(3.0)
     VREP.simx_finish(client_id)
