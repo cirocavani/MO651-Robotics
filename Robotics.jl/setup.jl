@@ -9,4 +9,4 @@ else
     Pkg.add(PackageSpec(url=pkg_dir))
 end
 
-eval(string("import ", pkg_name))
+eval(Meta.parse(string("import ", pkg_name)))

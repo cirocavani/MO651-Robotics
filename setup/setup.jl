@@ -22,7 +22,7 @@ Pkg.add(deps)
 Pkg.API.precompile()
 
 for m in deps
-    eval(string("import ", m))
+    eval(Meta.parse(string("import ", m)))
 end
 
 println("\nSetup done.")
