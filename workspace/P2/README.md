@@ -6,4 +6,6 @@ The general objective of this work is to build, on the V-REP robotic simulator, 
 
 ## Content
 
-...
+[**Controller - PID**](Controller%20-%20PID%20(draft).ipynb) ([NBViewer](https://nbviewer.jupyter.org/github/cirocavani/MO651-Robotics/blob/master/workspace/P2/Controller%20-%20PID%20(draft).ipynb))
+
+Simple PID controller for a P3DX robot.

@@ -17,7 +17,6 @@ export simx_start,
     simx_opmode_buffer,
     simx_return_ok
 
-
 const simx_opmode_oneshot      = 0x000000
 const simx_opmode_oneshot_wait = 0x010000
 const simx_opmode_streaming    = 0x020000
@@ -26,20 +25,18 @@ const simx_opmode_buffer       = 0x060000
 const simx_return_ok = 0x000000
 
 
-import Libdl
-
-const lib = Libdl.dlopen(joinpath(dirname(@__FILE__), "remoteApi.so"))
-const simx_start_fn = Libdl.dlsym(lib, :simxStart)
-const simx_finish_fn = Libdl.dlsym(lib, :simxFinish)
-const simx_get_object_handle_fn = Libdl.dlsym(lib, :simxGetObjectHandle)
-const simx_read_proximity_sensor_fn = Libdl.dlsym(lib, :simxReadProximitySensor)
-const simx_get_string_signal_fn = Libdl.dlsym(lib, :simxGetStringSignal)
-const simx_get_vision_sensor_image_fn = Libdl.dlsym(lib, :simxGetVisionSensorImage)
-const simx_get_object_position_fn = Libdl.dlsym(lib, :simxGetObjectPosition)
-const simx_get_object_orientation_fn = Libdl.dlsym(lib, :simxGetObjectOrientation)
-const simx_set_joint_target_velocity_fn = Libdl.dlsym(lib, :simxSetJointTargetVelocity)
-const simx_start_simulation_fn = Libdl.dlsym(lib, :simxStartSimulation)
-const simx_stop_simulation_fn = Libdl.dlsym(lib, :simxStopSimulation)
+const library = joinpath(dirname(@__FILE__), "remoteApi.so")
+const simx_start_fn = (:simxStart, library)
+const simx_finish_fn = (:simxFinish, library)
+const simx_get_object_handle_fn = (:simxGetObjectHandle, library)
+const simx_read_proximity_sensor_fn = (:simxReadProximitySensor, library)
+const simx_get_string_signal_fn = (:simxGetStringSignal, library)
+const simx_get_vision_sensor_image_fn = (:simxGetVisionSensorImage, library)
+const simx_get_object_position_fn = (:simxGetObjectPosition, library)
+const simx_get_object_orientation_fn = (:simxGetObjectOrientation, library)
+const simx_set_joint_target_velocity_fn = (:simxSetJointTargetVelocity, library)
+const simx_start_simulation_fn = (:simxStartSimulation, library)
+const simx_stop_simulation_fn = (:simxStopSimulation, library)
 
 function simx_start(connection_address, connection_port, wait_until_connected,
                     do_dot_reconnect_once_disconnected, timeout_in_ms, comm_thread_cycle_in_ms)
