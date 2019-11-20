@@ -6,7 +6,7 @@ source conf/env.sh
 
 echo "[ Python ] Installing..."
 
-$CONDA_INSTDIR/bin/conda env create -n python -f setup/environment-python.yaml
+$CONDA_INSTDIR/bin/conda env create --force -n python -f setup/environment-python.yaml
 
 PYTHON_KERNEL=$JUPYTER_DATA_DIR/kernels/robotics_python
 

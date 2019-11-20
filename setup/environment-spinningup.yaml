@@ -1,0 +1,22 @@
+# https://github.com/openai/spinningup/blob/master/setup.py
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - ipykernel
+  - cloudpickle==1.2.1
+  - ipython
+  - joblib
+  - matplotlib==3.1.1
+  - mpi4py
+  - numpy
+  - pandas
+  - pytest
+  - psutil
+  - scipy
+  - seaborn==0.8.1
+  - tqdm
+  - pip
+  - pip:
+    - gym[atari,box2d,classic_control]>=0.10.8
+    - tensorflow>=1.8.0,<2.0

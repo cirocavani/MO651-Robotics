@@ -49,9 +49,14 @@ Install Conda Environment `jupyter` with Jupyter Lab from channel `conda-force` 
 Install Conda Environment `python` with packages from channel `anaconda` (stable versions). Also add a Jupyter kernel `robotics_python` to be used on Notebooks and REPL.
 
 
+[**`install-spinningup.sh`**](install-spinningup.sh), [`environment-spinningup.yaml`](environment-spinningup.yaml)
+
+Install OpenAI Spinning Up in the Conda Environment `spinningup` with packages from channel `conda-forge`. Also add a Jupyter kernel `spinningup` to be used on Notebooks and REPL.
+
+
 [**`install-julia.sh`**](install-julia.sh), [`setup.jl`](setup.jl)
 
-Install Julia with data analysis packages (latest versions).
+Install Julia with data analysis packages (latest versions). Julia uses packages installed in Conda Environment `python` (i.e. PyPlot depends on Matplotlib).
 
 
 [**`install-vrep.sh`**](install-vrep.sh)
@@ -67,3 +72,8 @@ Download dependencies.
 [**`setup-dev.sh`**](setup-dev.sh)
 
 Add VS Code configuration (settings and packages to `python` environment).
+
+
+[**`update.sh`**](update.sh)
+
+Update Julia packages and Conda environments (Base, Jupyter and Python).

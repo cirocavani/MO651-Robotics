@@ -18,8 +18,10 @@ foreach(keys(Pkg.installed())) do m
 end
 "
 
+$CONDA_INSTDIR/bin/conda update -y -n base -c defaults conda
 $CONDA_INSTDIR/bin/conda update -y -n base -c defaults --all
 $CONDA_INSTDIR/bin/conda update -y -n jupyter -c conda-forge --all
 $CONDA_INSTDIR/bin/conda update -y -n python -c defaults --all
+# $CONDA_INSTDIR/bin/conda update -y -n spinningup -c defaults --all
 
 echo "Update done!"

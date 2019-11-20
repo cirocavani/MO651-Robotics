@@ -12,6 +12,7 @@ setup/install-jupyter.sh
 setup/install-python.sh
 setup/install-julia.sh
 setup/install-vrep.sh
+setup/install-spinningup.sh
 
 $CONDA_INSTDIR/bin/conda clean -y --all
 
