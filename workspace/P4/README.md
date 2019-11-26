@@ -31,6 +31,8 @@ https://github.com/rail-berkeley/softlearning
 
 [**OpenAI Spinning Up - SAC**](OpenAI%20Spinning%20Up%20-%20SAC.ipynb) ([NBViewer](https://nbviewer.jupyter.org/github/cirocavani/MO651-Robotics/blob/master/workspace/P4/OpenAI%20Spinning%20Up%20-%20SAC.ipynb))
 
+<a href="https://colab.research.google.com/github/cirocavani/MO651-Robotics/blob/master/workspace/P4/OpenAI%20Spinning%20Up%20-%20SAC.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 Using [OpenAI Spinning Up](https://spinningup.openai.com/) to demo Reinforcement Learning algorithm Soft Actor-Critic (SAC) on LunarLandingContinuous-V2 environment.
 
 ...
