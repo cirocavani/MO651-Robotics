@@ -1,8 +1,8 @@
 import time, cv2
+
 from matplotlib import pyplot as plt
 
-from vrep_robot.robot import Robot
-from vrep_robot.utils import *
+from robotics import Robot, vrep2array
 
 def display_image(image):
     """
@@ -16,9 +16,9 @@ def display_image(image):
 
 robot = Robot()
 
-#Reading ultrassonic sensors
-ultrassonic = robot.read_ultrassonic_sensors()
-print("Ultrassonic: ", ultrassonic)
+#Reading ultrasonic sensors
+ultrasonic = robot.read_ultrasonic_sensors()
+print("Ultrasonic: ", ultrasonic)
 
 #Reading laser sensor
 laser = robot.read_laser()

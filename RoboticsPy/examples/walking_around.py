@@ -1,6 +1,6 @@
 import time
 
-from vrep_robot.robot import Robot
+from robotics import Robot
 
 robot = Robot()
 

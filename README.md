@@ -126,12 +126,12 @@ Containerized project infrastructure (containers encapsulating application and d
 Supports a `robotics` container with all project and a `vrep` container to run V-REP on any Linux.
 
 
-[**`vrep-remote-api-python`**](vrep-remote-api-python/) ([README](vrep-remote-api-python/README.md))
+[**`RoboticsPy`**](RoboticsPy/) ([README](RoboticsPy/README.md))
 
-This project contains the Python bindings for C library of V-REP Remote API.
+This project contains the basic structure to control a Pioneer P3DX robot on the V-REP simulator and read its sensors.
 
 
-[**`vrep-robot-python`**](vrep-robot-python/) ([README](vrep-robot-python/README.md))
+[**`Robotics.jl`**](Robotics.jl/) ([README](Robotics.jl/README.md))
 
 This project contains the basic structure to control a Pioneer P3DX robot on the V-REP simulator and read its sensors.
 

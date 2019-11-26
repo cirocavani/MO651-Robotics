@@ -1,4 +1,4 @@
-from vrep_robot.robot import Robot
+from robotics import Robot
 
 braitenbergL=[-0.2,-0.4,-0.6,-0.8,-1.0,-1.2,-1.4,-1.6]
 braitenbergR=[-1.6,-1.4,-1.2,-1.0,-0.8,-0.6,-0.4,-0.2]
@@ -28,7 +28,7 @@ def braitenberg(dist, vel):
 
 robot = Robot()
 while(robot.get_connection_status() != -1):
-    us_distances = robot.read_ultrassonic_sensors()
+    us_distances = robot.read_ultrasonic_sensors()
     vel = braitenberg(us_distances[:8], 3) #Using only the 8 frontal sensors
     robot.set_left_velocity(vel[0])
     robot.set_right_velocity(vel[1])
