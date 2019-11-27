@@ -4,4 +4,9 @@ setup(
     name='robotics-py',
     version='0.0.1dev',
     packages=find_packages(),
+    install_requires=[
+        'gym',
+        'numpy',
+        'opencv-python'
+    ],
 )

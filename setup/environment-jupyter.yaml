@@ -1,7 +1,7 @@
 channels:
-    - conda-forge
+  - conda-forge
 dependencies:
-    - python=3.7
-    - jupyterlab=1.2
-    - nodejs
-    - rise
+  - python=3.7
+  - jupyterlab=1.2
+  - nodejs
+  - rise
